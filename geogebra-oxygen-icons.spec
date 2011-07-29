@@ -2,7 +2,7 @@ Name:           geogebra-oxygen-icons
 Summary:        GeoGebra Icons for Oxygen Icon Theme
 Version:        0.18.1
 Release:        %mkrel 1
-Group:          Productivity/Scientific/Math
+Group:          Sciences/Mathematics
 License:        LGPLv3
 Source:         GeoGebra_oxygen_icons.tar.gz
 Requires:       oxygen-icon-theme
@@ -24,6 +24,7 @@ This package provides MIME type icons that integrate well into the KDE/Oxygen ic
 #
 
 %install
+rm -rf %{buildroot}
 for SIZE in 16x16 22x22 32x32 48x48 64x64 128x128 256x256; do
 %{__install} -d -m755 %{buildroot}%{_datadir}/icons/oxygen/$SIZE/mimetypes
 %{__install} -m644 oxygen/$SIZE/mimetypes/application-vnd.geogebra.file.png %{buildroot}%{_datadir}/icons/oxygen/$SIZE/mimetypes
